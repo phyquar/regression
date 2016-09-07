@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# 誤差関数（最小二乗法）による回帰分析
+#回帰分析ツールまとめ
+#順次追加
 #
 
 import numpy as np
@@ -8,12 +9,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pandas import Series, DataFrame
 
-def Draw_least_square(x,y,m):
-	#x:トレーニングデータのインプット
-	#y:トレーニングデータのアウトプット
+def Draw_curve_by_least_square(x,y,m):
+	#x:トレーニングデータのインプット(リスト形式)
+	#y:トレーニングデータのアウトプット(リスト形式)
 	#m:多項式近似曲線の次数
 	def create_dataset(x,y):
-
     		dataset = DataFrame(columns=['x','y'])
     		for i in range(len(x)):
         			dataset = dataset.append(Series([x[i],y[i]], index=['x','y']),ignore_index=True)
