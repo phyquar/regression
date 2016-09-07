@@ -13,6 +13,7 @@ def Draw_curve_by_least_square(x,y,m):
 	#x:トレーニングデータのインプット(リスト形式)
 	#y:トレーニングデータのアウトプット(リスト形式)
 	#m:多項式近似曲線の次数
+	#指定した次数の多項式で近似曲線を描く関数
 	def create_dataset(x,y):
     		dataset = DataFrame(columns=['x','y'])
     		for i in range(len(x)):
